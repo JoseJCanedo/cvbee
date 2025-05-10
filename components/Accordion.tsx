@@ -40,18 +40,23 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, isOpen, t
 
 const defaultAccordionItems = [
   {
-    title: "Sign up for free",
-    content: "Start your journey with a 34-day trial. It's easy no credit card or commitment.",
+    title: "Education",
+    content: "Lectures, workshops and classes are offered to members of the club.",
   },
   {
-    title: "Easy to use",
+    title: "Monthly Meetings ",
     content:
-      "Our app is designed to be user-friendly and easy to use. We want to provide a seamless experience for your users so that you can focus on what matters.",
+      "We meet once a month to discuss club news, host a lecturer, gear raffles, socializing, and knowledge transfer. Meetings are once a month, on the second Monday, at either Oxbow Meadows or Striplin Terrance Church.",
   },
   {
-    title: "Focus on what matters",
+    title: "Equipment",
     content:
-      "With better financial management, you can reduce money-related stress and focus on what matters most. More to come.",
+      "Club members can rent select honey extraction equipment owned by the club.",
+  },
+  {
+    title: "Bees",
+    content:
+      "The club assists members and graduates from our beekeeping courses in finding and purchasing bees in packages and NUCs that are local to our region to ensure success.",
   },
 ];
 

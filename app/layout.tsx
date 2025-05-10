@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
+import Header from "components/Header";
+import Footer from "components/Footer";
 
 import "styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Next JS SaaS Starter Template",
-  description: "Next JS SaaS Starter Template",
+  title: "Chattahoochee Valley Beekeepers",
+  description: "Chattahoochee Valley Beekeepers",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -22,7 +24,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-white dark:bg-black min-h-screen">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {children}
+          <div className="flex flex-col min-h-screen bg-white dark:bg-black">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+
         </ThemeProvider>
       </body>
     </html>
