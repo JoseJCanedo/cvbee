@@ -18,7 +18,7 @@ export default function Hero() {
           About Us
         </Link> */}
         <Link
-          href="/membership"
+          href="/#"
           className="bg-black bg-white text-black px-5 py-2 rounded-md text-base font-semibold hover:bg-yellow-400 transition duration-300"
         >
           Become a Member
