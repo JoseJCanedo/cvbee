@@ -4,6 +4,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 
 import "styles/globals.css";
+import Banner from "components/Banner";
 
 export const metadata: Metadata = {
   title: "Chattahoochee Valley Beekeepers",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="flex flex-col min-h-screen bg-white dark:bg-black">
             <Header />
+            <Banner />
             {children}
             <Footer />
           </div>

@@ -26,7 +26,7 @@ const Customers: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row w-full">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-0 text-white dark:text-black text-center md:text-left md:w-1/2">
-              Over 50 members in our beeks community! 
+              Over 50 beeks in our community! 
             </h2>
             <div className="flex flex-wrap justify-center md:justify-end gap-6 md:w-1/2">
               {icons.map(({ Icon }, index) => (
