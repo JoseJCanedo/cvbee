@@ -1,5 +1,5 @@
-import { AiOutlineFacebook, AiOutlineX, AiOutlineGithub, AiOutlineLinkedin, AiOutlineInstagram } from "react-icons/ai";
-
+import { AiOutlineFacebook } from "react-icons/ai";
+//, AiOutlineX, AiOutlineGithub, AiOutlineLinkedin, AiOutlineInstagram
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -11,7 +11,7 @@ const Footer = () => {
           <a href="#" aria-label="Facebook" className="hover:text-gray-300">
             <AiOutlineFacebook className="w-5 h-5" />
           </a>
-          <a href="#" aria-label="LinkedIn" className="hover:text-gray-300">
+          {/* <a href="#" aria-label="LinkedIn" className="hover:text-gray-300">
             <AiOutlineLinkedin className="w-5 h-5" />
           </a>
           <a href="#" aria-label="Instagram" className="hover:text-gray-300">
@@ -22,7 +22,7 @@ const Footer = () => {
           </a>
           <a href="#" aria-label="GitHub" className="hover:text-gray-300">
             <AiOutlineGithub className="w-5 h-5" />
-          </a>
+          </a> */}
         </div>
       </div>
     </footer>
