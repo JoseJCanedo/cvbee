@@ -12,7 +12,7 @@ export default function Banner() {
     }
     const calcDate = f();
     const withinFiveDays = today.getMonth() === calcDate.getMonth() && ((today.getDate() - calcDate.getDate()) <= 0);
-    if (withinFiveDays) {
+    if (withinFiveDays && today.getMonth() === 22) {
         let meetingLocation = (today.getMonth() + 1) % 2 === 0 ? 'Striplin Terrace UMC' : 'Oxbow Meadows'
         let overrideInfo;
         const dateKey = `${(today.getMonth() + 1).toString().padStart(2, "0")}${today.getFullYear()}`
