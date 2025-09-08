@@ -96,7 +96,7 @@ export default function Home() {
                                     <li>• Monthly educational meetings with expert speakers</li>
                                     <li>• Hands-on beekeeping workshops and training</li>
                                     <li>• Group purchasing discounts on equipment</li>
-                                    <li>• Mentor program for beginning beekeepers</li>
+                                    <li>• Mentoring for beginning beekeepers</li>
                                     <li>• Access to club equipment and resources</li>
                                     <li>• Networking with experienced local beekeepers</li>
                                 </ul>
@@ -104,7 +104,7 @@ export default function Home() {
                             <div>
                                 <h3 className="font-semibold text-gray-700 mb-2">How to Join</h3>
                                 <p className="text-gray-600 mb-2">
-                                    New members are always welcome! Annual membership dues are $25 for individuals or $35 for families.
+                                    New members are always welcome! We have both annual and family memberships available..
                                 </p>
                                 <p className="text-gray-600 mb-2">
                                     Attend any monthly meeting to learn more, or contact us directly to get started with beekeeping in the Chattahoochee Valley.

@@ -19,8 +19,8 @@ export default function Footer() {
                         Serving Columbus, GA and the greater Chattahoochee Valley region
                     </p>
                     <div className="flex justify-center space-x-4 mb-4 text-sm">
-                        <a href="mailto:info@cvbeeks.org" className="text-gray-300 hover:text-yellow-400">
-                            Email: info@cvbeeks.org
+                        <a href="mailto:cvbasecretary1@gmail.com" className="text-gray-300 hover:text-yellow-400">
+                            Email: cvbasecretary1@gmail.com
                         </a>
                         {/* <span className="text-gray-500">•</span>
                         <a href="tel:+17065552337" className="text-gray-300 hover:text-yellow-400">
