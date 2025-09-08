@@ -1,0 +1,49 @@
+{
+  "project_structure": {
+    "cvb-website/": {
+      "package.json": {
+        "name": "cvb-website",
+        "version": "0.1.0",
+        "private": true,
+        "scripts": {
+          "dev": "next dev",
+          "build": "next build",
+          "start": "next start",
+          "lint": "next lint"
+        },
+        "dependencies": {
+          "next": "14.0.0",
+          "react": "^18",
+          "react-dom": "^18",
+          "lucide-react": "^0.263.1"
+        },
+        "devDependencies": {
+          "eslint": "^8",
+          "eslint-config-next": "14.0.0",
+          "tailwindcss": "^3.3.0",
+          "autoprefixer": "^10.0.1",
+          "postcss": "^8"
+        }
+      },
+      "next.config.js": "/** @type {import('next').NextConfig} */\nconst nextConfig = {\n  output: 'export',\n  trailingSlash: true,\n  images: {\n    unoptimized: true\n  }\n}\n\nmodule.exports = nextConfig",
+      "tailwind.config.js": "/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: [\n    './pages/**/*.{js,ts,jsx,tsx,mdx}',\n    './components/**/*.{js,ts,jsx,tsx,mdx}',\n    './app/**/*.{js,ts,jsx,tsx,mdx}',\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}",
+      "app/": {
+        "layout.js": "import './globals.css'\n\nexport const metadata = {\n  title: {\n    default: 'Chattahoochee Valley Beekeepers | Columbus GA Beekeeping Club',\n    template: '%s | Chattahoochee Valley Beekeepers'\n  },\n  description: 'Join the Chattahoochee Valley Beekeepers Association in Columbus, Georgia. Monthly meetings, workshops, and community for beekeepers of all experience levels.',\n  keywords: ['Chattahoochee Valley Beekeepers', 'Columbus GA beekeeping', 'Georgia beekeepers', 'beekeeping club', 'honey bees', 'apiary'],\n  authors: [{ name: 'Chattahoochee Valley Beekeepers' }],\n  creator: 'Chattahoochee Valley Beekeepers',\n  publisher: 'Chattahoochee Valley Beekeepers',\n  openGraph: {\n    type: 'website',\n    locale: 'en_US',\n    url: 'https://cvbeeks.org',\n    title: 'Chattahoochee Valley Beekeepers',\n    description: 'Columbus GA\\'s premier beekeeping association',\n    siteName: 'Chattahoochee Valley Beekeepers',\n  },\n  twitter: {\n    card: 'summary_large_image',\n    title: 'Chattahoochee Valley Beekeepers',\n    description: 'Columbus GA\\'s premier beekeeping association',\n  },\n  robots: {\n    index: true,\n    follow: true,\n  },\n}\n\nexport default function RootLayout({ children }) {\n  return (\n    <html lang=\"en\">\n      <head>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n        <link rel=\"canonical\" href=\"https://cvbeeks.org\" />\n        <script\n          type=\"application/ld+json\"\n          dangerouslySetInnerHTML={{\n            __html: JSON.stringify({\n              \"@context\": \"https://schema.org\",\n              \"@type\": \"Organization\",\n              \"name\": \"Chattahoochee Valley Beekeepers\",\n              \"alternateName\": [\"CVB\", \"Chattahoochee Valley Beekeepers Association\"],\n              \"url\": \"https://cvbeeks.org\",\n              \"description\": \"Beekeeping association serving the Chattahoochee Valley region in Columbus, Georgia.\",\n              \"address\": {\n                \"@type\": \"PostalAddress\",\n                \"streetAddress\": \"Columbus Community Center, 123 Community Way\",\n                \"addressLocality\": \"Columbus\",\n                \"addressRegion\": \"GA\",\n                \"postalCode\": \"31901\",\n                \"addressCountry\": \"US\"\n              },\n              \"contactPoint\": {\n                \"@type\": \"ContactPoint\",\n                \"telephone\": \"+1-706-555-2337\",\n                \"contactType\": \"customer service\",\n                \"email\": \"info@cvbeeks.org\"\n              }\n            })\n          }}\n        />\n      </head>\n      <body>{children}</body>\n    </html>\n  )\n}",
+        "page.js": "// This will contain your main App component from the artifact",
+        "globals.css": "@tailwind base;\n@tailwind components;\n@tailwind utilities;"
+      },
+      "public/": {
+        "sitemap.xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url>\n    <loc>https://cvbeeks.org</loc>\n    <lastmod>2025-08-26</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>https://cvbeeks.org/news</loc>\n    <lastmod>2025-08-26</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n  <url>\n    <loc>https://cvbeeks.org/events</loc>\n    <lastmod>2025-08-26</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n  <url>\n    <loc>https://cvbeeks.org/contact</loc>\n    <lastmod>2025-08-26</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n</urlset>",
+        "robots.txt": "User-agent: *\nAllow: /\n\nSitemap: https://cvbeeks.org/sitemap.xml",
+        "favicon.svg": "# Add your bee/honey themed favicon here"
+      },
+      "README.md": "# Chattahoochee Valley Beekeepers Website\n\nA modern, SEO-optimized website for the Chattahoochee Valley Beekeepers Association in Columbus, Georgia.\n\n## Getting Started\n\n```bash\nnpm install\nnpm run dev\n```\n\n## Deployment\n\n```bash\nnpm run build\nnpm run start\n```\n\n## Features\n\n- SEO optimized for local search\n- Mobile responsive design\n- Event calendar with JSON support\n- News/updates system\n- Contact forms\n- Structured data for Google\n\n## Domain\n\nThis site is designed for deployment to cvbeeks.org"
+    }
+  },
+  "setup_commands": [
+    "npx create-next-app@latest cvb-website",
+    "cd cvb-website",
+    "npm install lucide-react",
+    "npx tailwindcss init -p"
+  ]
+}

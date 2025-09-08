@@ -1,0 +1,50 @@
+# robots.txt for cvbeeks.org
+# Chattahoochee Valley Beekeepers Website
+
+# Allow all web crawlers to access all content
+User-agent: *
+Allow: /
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block access to admin or private areas (if you add them later)
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
+
+# Block access to development/temp files
+User-agent: *
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.next/
+Disallow: /out/
+Disallow: /_next/
+
+# Allow access to common resource files
+User-agent: *
+Allow: /favicon.svg
+Allow: /sitemap.xml
+Allow: /.well-known/
+
+# Sitemap location (most important!)
+Sitemap: https://cvbeeks.org/sitemap.xml
+
+# Additional sitemaps if you create them later
+# Sitemap: https://cvbeeks.org/news-sitemap.xml
+# Sitemap: https://cvbeeks.org/events-sitemap.xml
+
+# Host specification (helps with domain canonicalization)
+Host: cvbeeks.org
