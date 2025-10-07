@@ -21,6 +21,20 @@ const events = [
             topic: 'Organic Beekeeping',
             bio: 'Ben will coming from Auburn University to give a presentation to our group on Organic Beekeeping.'
         }
+    },
+    {
+        id: '2',
+        title: 'CVBA Picnic',
+        date: '10/12/2025',
+        time: '1:00 PM',
+        location: '9089 GA Hwy 18, Pine Mountain, GA',
+        type: 'social',
+        description: 'Join us for our yearly CVBA picnic! Events will start at 1:00PM and be going through 4:30. We will have a 50/50 raffle and prizes for contest run from $50-$100. We will have smoker, honey, and arts and crafts competitions. The events are as follows: 1:00 Smoker Contest Starts, 2:30 Honey and Arts and Crafts Contest, 3:30 Dinner, 4:00 Inspect Smokers, 4:30 Awards for arts and crafts.',
+        // speaker: {
+        //     name: 'Ben Demoras',
+        //     topic: 'Organic Beekeeping',
+        //     bio: 'Ben will coming from Auburn University to give a presentation to our group on Organic Beekeeping.'
+        // }
     }
 ]
 type Event = 'meeting' | 'workshop' | 'inspection' | 'social' | 'other'
