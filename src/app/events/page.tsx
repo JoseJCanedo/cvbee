@@ -59,7 +59,31 @@ const formatDate = (dateString: string) => {
     });
 };
 
+interface EventProps {
+  id: string;
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  type: string;
+  description: string;
+  speaker?: {
+    name: string;
+    topic: string;
+    bio: string;
+  };
+}
+
+function sortByDate(events: EventProps[]): EventProps[] {
+  return [...events].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime();
+  });
+}
+
 export default function Home() {
+const sortedEvents = sortByDate(events);
     return (
         <HeroUIProvider>
             <div
@@ -106,7 +130,7 @@ export default function Home() {
                         </div>
                     </CardBody>
                 </Card>
-                {events.map((mtgEvent, i) => (
+                {sortedEvents?.map((mtgEvent, i) => (
                     <Card className='max-w-[1100px] mx-2 w-full mt-8 p-8 text-black bg-zinc-100 mx-auto' key={i}>
                         <CardHeader>
                             <div className="flex items-center justify-between mb-4 w-full">
