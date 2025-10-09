@@ -200,7 +200,7 @@ export default function Home() {
             </h2>
           </CardHeader>
           <CardBody>
-            {sortedEvents.slice(0, 2).map(event => (
+            {sortedEvents.slice(0, 2).map((event: Record<string, any>) => (
               <div key={event.id} className="border-l-4 border-yellow-500 pl-4 my-2">
                 <h3 className="font-semibold text-gray-800">{event.title}</h3>
                 <p className="text-gray-600 text-sm">
@@ -232,7 +232,7 @@ export default function Home() {
           </CardHeader>
           <CardBody>
             <div className="space-y-4">
-              {sortedNews.slice(0, 2).map((item, i) => (
+              {sortedNews.slice(0, 2).map((item: Record<string, any>, i: number) => (
                 <article key={i} className="border-b border-gray-200 pb-4 last:border-b-0">
                   <h3 className="font-semibold text-gray-800 mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm mb-2">
