@@ -121,7 +121,7 @@ export default function Home() {
                         <Link href='/events'>View Events <FaArrowRight className='ml-1' /></Link>
                     </CardFooter> */}
                 </Card>
-                <Card className='max-w-[1100px] mx-2 w-full my-8 p-8 text-black bg-zinc-100 mx-auto'>
+                {/* <Card className='max-w-[1100px] mx-2 w-full my-8 p-8 text-black bg-zinc-100 mx-auto'>
                     <CardHeader>
                         <h2 className='text-xl font-bold'>
                             Send Us A Message
@@ -181,7 +181,7 @@ export default function Home() {
                         </div>
                     </CardBody>
 
-                </Card>
+                </Card> */}
             </div>
         </HeroUIProvider>
     );
