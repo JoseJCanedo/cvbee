@@ -1,5 +1,6 @@
 'use client'
 import { Card, CardBody, CardHeader, HeroUIProvider } from "@heroui/react";
+import Image from "next/image";
 // import { getCurrentAndNextSecondMondays } from "@/utils/dates";
 
 const news = [
@@ -24,6 +25,14 @@ const news = [
     content: 'We need people to volunteer for the parade. The parade is schedule for December 6th, 2025 at 10:00 AM. The route starts at Colin Powell Parkway in Phenix City and we would need to be there by 8:30 AM. We are looking for members who would like to be decorators and riders as well. Come dressed in your beekeeping suits or as bees. A sign up sheet will be available at the picnic.',
     author: 'Club Secretary'
   },
+  {
+    id: '3',
+    title: 'Bi-City Columbus Parade',
+    date: '12/07/2025',
+    content: 'Even with the wet rainy day we had several members join together to help decorate our float and it was a success! We placed 2nd in the Independent Float Division. Kevin was a huge hit with the bee suit.',
+    author: 'Club Secretary',
+    images: ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg']
+  },
 ]
 
 interface EventProps {
@@ -32,6 +41,7 @@ interface EventProps {
   date: string;
   content: string;
   author: string;
+  images?: string[];
 }
 
 function sortByDate(events: EventProps[]): EventProps[] {
@@ -81,6 +91,36 @@ export default function Home() {
                 <span>By {item.author}</span>
               </div>
               <div className="text-gray-700 leading-relaxed">{item.content}</div>
+              {/* {item && item.images ?
+                item.images.map(img => (
+                  <div key={img} className='p-4'>
+                    <Image alt='bee info' src={`/parade/${img}`} width={300} height={300} />
+                  </div>
+                ))
+                : null
+              } */}
+              {item && item.images ?
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                  {item.images.map((img, index) => {
+                    // Generate random heights for variety
+                    const heights = [200, 250, 300, 350, 400];
+                    const randomHeight = heights[index % heights.length];
+
+                    return (
+                      <div key={img}>
+                        <Image
+                          alt='bee info'
+                          src={`/parade/${img}`}
+                          width={300}
+                          height={randomHeight}
+                          className="object-cover rounded w-full"
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+                : null
+              }
             </CardBody>
           </Card>
         ))}
