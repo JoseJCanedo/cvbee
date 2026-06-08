@@ -1,6 +1,6 @@
 import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
-import OfficersSection from "@/components/OfficersSection";
+// import OfficersSection from "@/components/OfficersSection";
 import MeetingSection from "@/components/MeetingSection";
 import UpdatesPreview from "@/components/UpdatesPreview";
 import Footer from "@/components/Footer";
@@ -16,7 +16,7 @@ export default function HomePage() {
       <NavBar />
       <main>
         <HeroSection />
-        <OfficersSection />
+        {/* <OfficersSection /> */}
         <MeetingSection upcomingMeeting={upcomingMeeting} />
         <UpdatesPreview posts={recentPosts} />
       </main>
