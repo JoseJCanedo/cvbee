@@ -1,0 +1,4 @@
+# HeroUI Pro registry auth — required for @heroui/pro package
+# Replace YOUR_LICENSE_KEY_HERE with your actual key from https://heroui.pro/dashboard
+# DO NOT commit this file to git
+//registry.heroui.com/:_authToken=YOUR_LICENSE_KEY_HERE

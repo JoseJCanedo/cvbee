@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chattahoochee Valley Beekeepers Association Website
+
+A modern, bold Next.js website for the CVBA — built with HeroUI v3, Tailwind CSS v4, and MDX-powered updates.
+
+---
+
+## Tech Stack
+
+- **Next.js 15** (App Router)
+- **HeroUI v3** (free) + **HeroUI Pro v3** (license required)
+- **Tailwind CSS v4**
+- **next-mdx-remote** for MDX-powered update posts
+- **next-themes** for dark/light mode
+- **Deployed on Render**
+
+---
+
+## HeroUI Pro License Setup
+
+> ⚠️ Required before running `npm install` if you want Pro components.
+
+1. Create a `.npmrc` file in the project root (this file is gitignored):
+
+```
+//registry.heroui.com/:_authToken=YOUR_LICENSE_KEY_HERE
+```
+
+2. Install the Pro package:
+
+```bash
+npm install @heroui/pro
+```
+
+3. Your license key can be found at https://heroui.pro/dashboard
+
+> If you skip this step, free HeroUI components will still work. Pro components are marked with comments in the source.
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Managing Content
 
-## Learn More
+### Officers & Meeting Info
 
-To learn more about Next.js, take a look at the following resources:
+Edit `src/lib/constants.ts` — all officer names, titles, emails, and meeting details live here. No code changes needed elsewhere.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Posting Updates
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Add a new `.mdx` file to `src/content/updates/`:
 
-## Deploy on Vercel
+```
+src/content/updates/2025-06-01-my-post-title.mdx
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Frontmatter format:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```mdx
+---
+title: "Spring Inspection Results"
+date: "2025-06-01"
+excerpt: "A brief summary shown on the updates listing page."
+author: "Carlos"
+---
+
+Your **markdown** content here. You can also use React components.
+```
+
+The filename becomes the URL slug: `/updates/2025-06-01-my-post-title`
+
+Posts are sorted by date (newest first) automatically.
+
+---
+
+## Project Structure
+
+```
+src/
+  app/
+    layout.tsx          # Root layout + theme provider
+    page.tsx            # Homepage (assembles all sections)
+    updates/
+      page.tsx          # All updates listing
+      [slug]/
+        page.tsx        # Individual post page
+  components/
+    NavBar.tsx
+    HeroSection.tsx
+    OfficersSection.tsx
+    MeetingSection.tsx
+    UpdatesPreview.tsx
+    UpdateCard.tsx
+    HexBackground.tsx
+    MdxRenderer.tsx
+    ThemeToggle.tsx
+    Footer.tsx
+  content/
+    updates/            # Add .mdx files here
+  lib/
+    constants.ts        # Officers data, meeting info
+    mdx.ts              # MDX file reading helpers
+  styles/
+    globals.css
+```
+
+---
+
+## Deployment (Render)
+
+1. Connect your GitHub repo to Render
+2. Set build command: `npm run build`
+3. Set start command: `npm start`
+4. Add environment variable for HeroUI Pro if needed:
+   `HEROUI_LICENSE_TOKEN=your_key_here`
+   Then in `.npmrc`: `//registry.heroui.com/:_authToken=${HEROUI_LICENSE_TOKEN}`

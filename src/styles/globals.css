@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+@plugin "@tailwindcss/typography";
+
+/* ─────────────────────────────────────────────
+   CVBA Custom Theme
+   Bold & modern with warm honeycomb palette
+   ───────────────────────────────────────────── */
+
+:root {
+  /* Honey gold — primary accent */
+  --accent: oklch(0.72 0.18 75);
+  --accent-foreground: oklch(0.12 0.02 75);
+
+  /* Deep amber — secondary accent */
+  --amber-deep: oklch(0.58 0.16 60);
+
+  /* Background tones */
+  --background: oklch(0.97 0.01 80);
+  --foreground: oklch(0.14 0.02 60);
+
+  /* Card / surface */
+  --card: oklch(0.99 0.005 80);
+  --card-foreground: oklch(0.14 0.02 60);
+
+  /* Muted text */
+  --muted: oklch(0.55 0.03 75);
+
+  /* Border */
+  --border: oklch(0.88 0.03 75);
+
+  /* Hex motif color */
+  --hex-fill: oklch(0.72 0.18 75 / 0.08);
+  --hex-stroke: oklch(0.72 0.18 75 / 0.25);
+}
+
+.dark {
+  --accent: oklch(0.78 0.19 75);
+  --accent-foreground: oklch(0.10 0.02 75);
+
+  --background: oklch(0.10 0.015 60);
+  --foreground: oklch(0.93 0.02 75);
+
+  --card: oklch(0.14 0.015 60);
+  --card-foreground: oklch(0.93 0.02 75);
+
+  --muted: oklch(0.55 0.04 75);
+
+  --border: oklch(0.25 0.03 60);
+
+  --hex-fill: oklch(0.78 0.19 75 / 0.06);
+  --hex-stroke: oklch(0.78 0.19 75 / 0.2);
+}
+
+/* ─────────────────────────────────────────────
+   Typography
+   Display: Syne (geometric, modern)
+   Body: DM Sans (clean, warm)
+   ───────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap");
+
+html {
+  font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Syne", sans-serif;
+}
+
+/* ─────────────────────────────────────────────
+   Global base styles
+   ───────────────────────────────────────────── */
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth section transitions */
+section {
+  position: relative;
+}
+
+/* Accent color utility */
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}

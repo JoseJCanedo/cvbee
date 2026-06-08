@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "Sarah Mitchell",
+    "companyName": "Riverview Apiaries",
+    "email": "sarah@riverviewapiaries.com",
+    "phone": "706-555-0142",
+    "location": "Columbus, GA",
+    "categories": ["Queens", "Nucs"],
+    "description": "Italian and Carniolan queens raised locally. Available May through August. 5-frame nucs with mated queen available in spring.",
+    "availability": "Spring / Summer",
+    "website": "https://riverviewapiaries.com",
+    "memberSince": 2018,
+    "active": false
+  },
+  {
+    "id": "2",
+    "name": "Dale Humphrey",
+    "companyName": "",
+    "email": "dale.humphrey@email.com",
+    "phone": "334-555-0198",
+    "location": "Phenix City, AL",
+    "categories": ["Honey", "Beeswax Products", "Packages", "Queens"],
+    "description": "Raw wildflower and sourwood honey, small-batch. Beeswax candles and lip balm. Available at the farmers market and by appointment.",
+    "availability": "Year-round",
+    "website": "",
+    "memberSince": 2021,
+    "active": false
+  },
+  {
+    "id": "3",
+    "name": "Marcus Webb",
+    "companyName": "Webb's Bees",
+    "email": "marcus@webbsbees.com",
+    "phone": "706-555-0377",
+    "location": "LaGrange, GA",
+    "categories": ["Packages", "Queens", "Honey"],
+    "description": "3-lb packages with Italian queens. Also sell extracted wildflower honey in quart and half-gallon jars. Call ahead for availability.",
+    "availability": "Spring (packages), Year-round (honey)",
+    "website": "",
+    "memberSince": 2015,
+    "active": false
+  },
+  {
+    "id": "4",
+    "name": "Linda Pearce",
+    "companyName": "Pearce Family Honey",
+    "email": "linda@pearcehoney.com",
+    "phone": "706-555-0261",
+    "location": "Columbus, GA",
+    "categories": ["Honey", "Services"],
+    "description": "Varietal honeys including tulip poplar and clover. Also offer swarm removal (free within 30 miles of Columbus) and hive relocation services.",
+    "availability": "Year-round",
+    "website": "https://pearcehoney.com",
+    "memberSince": 2019,
+    "active": false
+  },
+  {
+    "id": "5",
+    "name": "Tommy Garrett",
+    "companyName": "",
+    "email": "tgarrett@email.com",
+    "phone": "334-555-0084",
+    "location": "Auburn, AL",
+    "categories": ["Equipment", "Nucs"],
+    "description": "Used and new woodenware — deeps, mediums, frames. Also sell 4-frame spring nucs. Equipment priced to move.",
+    "availability": "Spring (nucs), Year-round (equipment)",
+    "website": "",
+    "memberSince": 2022,
+    "active": false
+  }
+]
