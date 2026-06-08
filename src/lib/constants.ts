@@ -106,7 +106,7 @@ export const MEETING_INFO = {
     "Raffles",
   ],
   notes:
-    "Meetings are open to the public. New and prospective beekeepers are always welcome!",
+    "Meetings are open to all members. New and prospective beekeepers are always welcome!",
 };
 
 // ─── Updates listing page ──────────────────────
