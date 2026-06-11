@@ -40,7 +40,7 @@ export interface Officer {
 
 export const OFFICERS: Officer[] = [
   {
-    name: "Dr. Kevin Weiss",
+    name: "Dr. Kevin Weis",
     title: "President",
     // email: "president@cvba.org",
     photo: "/officers/kevin.png",
