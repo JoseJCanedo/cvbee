@@ -61,7 +61,7 @@ export default function NavBar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <span className="shrink-0 rounded-full dark:ring-1 dark:ring-yellow-400/90 dark:bg-amber-50/60 inline-flex">
+          <span className="shrink-0 rounded-full ring-1 ring-black dark:ring-yellow-400 bg-white dark:bg-amber-50/90 inline-flex">
             <Image src="/favicon.svg" alt="CVBA logo" width={32} height={32} />
           </span>
           <span className="font-display font-bold text-lg tracking-tight group-hover:text-accent transition-colors">
