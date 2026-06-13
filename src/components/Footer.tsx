@@ -30,7 +30,9 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <Image src="/favicon.svg" alt="CVBA logo" width={100} height={100} className="mb-3" />
+            <span className="inline-flex rounded-full dark:ring-2 dark:ring-yellow-400/90 dark:bg-amber-50/60 mb-3">
+              <Image src="/favicon.svg" alt="CVBA logo" width={100} height={100} />
+            </span>
             <p className="text-sm text-muted leading-relaxed max-w-xs">
               {SITE_NAME} — serving hobbyist and commercial beekeepers in the Chattahoochee Valley.
             </p>

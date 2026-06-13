@@ -86,13 +86,13 @@ export const MEETING_LOCATIONS = [
     googleMapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Oxbow+Meadows+Columbus+GA",
   },
-  // TODO: add second alternating venue
-  // {
-  //   id: "second-venue-id",
-  //   name: "Venue Name",
-  //   address: "Street, City, State ZIP",
-  //   googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=...",
-  // },
+  {
+    id: "striplin-terrace",
+    name: "Striplin Terrace Methodist Church",
+    address: "4170 Striplin Terrace, Columbus, GA 31909",
+    googleMapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=4170+Striplin+Terrace+Columbus+GA+31909",
+  },
 ];
 
 export const MEETING_INFO = {
